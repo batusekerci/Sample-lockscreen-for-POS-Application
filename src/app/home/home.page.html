@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Uyanık Kütüphane
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+  <ion-button expand="block" color="danger" (click)="showLockscreen()">
+    <ion-icon name="md-lock" slot="start"></ion-icon>KİLİTLE
+  </ion-button>
+  
+    <span color="primary" *ngIf="isCorrect">
+      <p class="ion-text-center">Açıldı!</p>
+    </span>
+  </div>
+  </ion-content>
+ 
+

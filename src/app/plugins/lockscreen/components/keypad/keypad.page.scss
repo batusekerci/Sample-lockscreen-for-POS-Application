@@ -1,0 +1,80 @@
+ion-content {
+  --background: #ccc url(../../../../../assets/bg-3.jpg) no-repeat center center / cover;
+}
+
+.vertical-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.lockscreen-page {
+  text-align: center;
+
+  .keypad-container {
+    margin-bottom: 48px;
+    
+  }
+
+  .dots {
+    padding: 4px;
+    margin-bottom: 24px;
+    text-align: center;
+    min-height: 44px;
+
+    .dot {
+      font-size: 24px;
+      color: var(--ion-color-medium);
+      padding: 4px;
+    }
+  }
+
+  .keypad {
+    width: 500px;
+    .keypad-item {
+      width: 150px;
+      height: 150px;
+      font-size: 32px;
+      margin: 4px 8px;
+
+      &.keypad-icon {
+        font-size: 20px;
+        --padding-start: 0;
+        --padding-end: 0;
+      }
+    }
+  }
+
+  .full-height {
+    height: 100%;
+
+    ion-row {
+      height: 100%;
+    }
+  }
+}
+
+.animated-shake {
+  animation-duration: 750ms;
+  animation-fill-mode: both;
+  animation-name: shake;
+
+  .dot {
+    color: var(--ion-color-danger) !important;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0)
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px)
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px)
+  }
+}
